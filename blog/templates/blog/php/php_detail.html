@@ -1,0 +1,43 @@
+{% extends 'base.html' %} {% load static %} {% block content %}
+
+
+<section class="services section container" id="services">
+       <br>
+       <br>
+       <h5 class="card-title "> {{postephp.title}}</h5>
+       <pre>
+               <p class="full">
+               
+                    
+                      {{postephp.description}}
+                 
+               </p>
+        </pre>
+        <pre>
+        <section class="full">
+               Exemple :
+               <center>
+                     
+                             <code>
+                               {{postephp.code}}
+                             </code>
+                         
+               </center>
+        </section>
+ </pre>
+       <pre>
+       <section>
+              Resultat :
+              <center>
+                  
+        <code  class="language-PHP">
+           
+              {{postephp.resultat}}
+        </code>
+  
+              </center>
+       </section>
+</pre>
+
+</section>
+{% endblock content %}

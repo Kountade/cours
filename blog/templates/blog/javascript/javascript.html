@@ -1,0 +1,186 @@
+{% extends 'base.html' %} {% load static %} {% block content %}
+
+
+<section class="services section container" id="services">
+    <div class="row">
+    <div class="col-lg-4">
+        <div class="card-body">
+            <h5 class="card-title ">INTRODUCTION AU COURS JAVASCRIPT</h5>
+            <!-- Default List group -->
+            {% for sct1 in scripts1 %}
+            <ul class="list-group">
+                <li class="list-group-item"><a href="{% url 'javascriptdetail' sct1.title %}"class="underline">{{sct1.title}}</a></li>
+              
+            </ul><!-- End Default List group -->
+            {% endfor %}
+    </div>
+
+
+       
+</div>
+<div class="col-lg-4">
+        <div class="card-body">
+            <h5 class="card-title ">LES VARIABLES ET TYPES DE VALEURS JAVASCRIPT</h5>
+            <!-- Default List group -->
+            {% for sct2 in scripts2 %}
+            <ul class="list-group">
+                <li class="list-group-item"><a href="{% url 'javascriptdetail' sct2.title %}"class="underline">{{sct2.title}}</a></li>
+              
+            </ul><!-- End Default List group -->
+            {% endfor %}
+    </div>
+
+
+    
+       
+
+    
+       
+</div>
+<div class="col-lg-4">
+        <div class="card-body">
+            <h5 class="card-title ">LES STRUCTURES DE CONTRÔLE JAVASCRIPT</h5>
+            <!-- Default List group -->
+            {% for sct3 in scripts3 %}
+            <ul class="list-group">
+                <li class="list-group-item"><a href="{% url 'javascriptdetail' sct3.title %}"class="underline">{{sct3.title}}</a></li>
+              
+            </ul><!-- End Default List group -->
+            {% endfor %}
+    </div>
+
+    
+       
+</div>
+<div class="col-lg-4">
+        <div class="card-body">
+            <h5 class="card-title ">DÉCOUVERTE DES FONCTIONS EN PHP</h5>
+            <!-- Default List group -->
+            {% for dt4 in data4 %}
+            <ul class="list-group">
+                <li class="list-group-item"><a href="#"class="underline">{{dt4.title}}</a></li>
+              
+            </ul><!-- End Default List group -->
+            {% endfor %}
+    </div>
+
+    
+       
+</div>
+<div class="col-lg-4">
+        <div class="card-body">
+            <h5 class="card-title ">LES VARIABLES TABLEAUX EN PHP</h5>
+            <!-- Default List group -->
+            {% for dt5 in data5 %}
+            <ul class="list-group">
+                <li class="list-group-item"><a href="#"class="underline">{{dt5.title}}</a></li>
+              
+            </ul><!-- End Default List group -->
+            {% endfor %}
+    </div>
+
+    
+       
+</div>
+<div class="col-lg-4">
+        <div class="card-body">
+            <h5 class="card-title ">LES VARIABLES SUPERGLOBALES PHP</h5>
+            <!-- Default List group -->
+            {% for dt6 in data6 %}
+            <ul class="list-group">
+                <li class="list-group-item"><a href="#"class="underline">{{dt6.title}}</a></li>
+              
+            </ul><!-- End Default List group -->
+            {% endfor %}
+    </div>
+
+
+
+
+</div>
+<div class="col-lg-4">
+        <div class="card-body">
+            <h5 class="card-title ">    MANIPULER DES FICHIERS EN PHP</h5>
+            <!-- Default List group -->
+            {% for dt7 in data7 %}
+            <ul class="list-group">
+                <li class="list-group-item"><a href="#"class="underline">{{dt7.title}}</a></li>
+              
+            </ul><!-- End Default List group -->
+            {% endfor %}
+    </div>
+
+
+
+
+
+
+
+
+
+</div>
+<div class="col-lg-4">
+        <div class="card-body">
+            <h5 class="card-title "> UTILISER LES EXPRESSIONS RÉGULIÈRES OU RATIONNELLES EN PHP</h5>
+            <!-- Default List group -->
+            {% for dt8 in data8 %}
+            <ul class="list-group">
+                <li class="list-group-item"><a href="#"class="underline">{{coursphp.title}}</a></li>
+              
+            </ul><!-- End Default List group -->
+            {% endfor %}
+    </div>
+
+
+
+
+
+
+
+</div>
+<div class="col-lg-4">
+        <div class="card-body">
+            <h5 class="card-title "> PROGRAMMATION ORIENTÉE OBJET (POO) PHP : CONCEPTS DE BASE</h5>
+            <!-- Default List group -->
+            {% for dt9 in data9 %}
+            <ul class="list-group">
+                <li class="list-group-item"><a href="#"class="underline">{{coursphp.title}}</a></li>
+              
+            </ul><!-- End Default List group -->
+            {% endfor %}
+    </div>
+
+
+
+
+
+
+
+
+
+</div>
+<div class="col-lg-4">
+        <div class="card-body">
+            <h5 class="card-title ">  PROGRAMMATION ORIENTÉE OBJET PHP : NOTIONS AVANCÉES</h5>
+            <!-- Default List group -->
+            {% for dt10 in data10 %}
+            <ul class="list-group">
+                <li class="list-group-item"><a href="#"class="underline">{{coursphp.title}}</a></li>
+              
+            </ul><!-- End Default List group -->
+            {% endfor %}
+    </div>
+
+
+
+
+    
+
+
+
+    
+
+
+    </div>
+</section>
+{% endblock content %}

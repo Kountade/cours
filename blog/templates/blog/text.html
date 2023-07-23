@@ -1,0 +1,41 @@
+  
+<!-- home section ends -->
+<section class="container" id="services">
+
+
+  <div class="row">
+    {% for i  in articles %}
+
+    <div class="col-md-3 blog">
+
+      <div class="box">
+        <div class="image">
+            <img src="{{i.urlToImage}}" alt="">
+            <p>{{i.description}}</p>
+            <p>{{i.author}}</p>
+            <p>{{i.publishedAt}}</p>
+        </div>
+        <div class="content">
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div>
+            <h3> {{top.title}}</h3>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa, deleniti!</p>
+            <a href="{{ i.url}}" class="btnn">detail</a>
+        </div>
+    </div>
+
+  
+   <br>
+  
+  </div>
+
+ 
+
+  {% endfor %}
+  </div> 
+</section>

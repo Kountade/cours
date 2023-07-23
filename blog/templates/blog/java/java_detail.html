@@ -1,0 +1,43 @@
+{% extends 'base.html' %} {% load static %} {% block content %}
+
+
+<section class="services section container" id="services">
+       <br>
+       <br>
+       <h5 class="card-title "> {{coursphp.title}}</h5>
+       <pre>
+       <section>
+
+              {{coursphp.description}}
+  
+       </section>
+</pre>
+      
+
+       <section>
+              Exemple :
+              <center>
+                     <pre>
+                            <code>
+                              {{coursphp.code}}
+                            </code>
+                           </pre>
+              </center>
+       </section>
+       
+
+       <pre>
+       <section>
+              Resultat :
+              <center>
+                  
+        <code  class="language-java">
+              {{coursphp.resultat}}
+        </code>
+  
+              </center>
+       </section>
+</pre>
+
+</section>
+{% endblock content %}

@@ -1,0 +1,42 @@
+{% extends 'base.html' %} {% load static %} {% block content %}
+
+
+<section class="services section container" id="services">
+       <br>
+       <br>
+       <h5 class="card-title "> {{poste.title}}</h5>
+      
+              <section>
+       
+                     {{poste.description}}
+         
+              </section>
+
+
+       <section class="card-body">
+              Exemple :
+              <center>
+                     <pre>
+                            <code>
+                              {{poste.code}}
+                            </code>
+                           </pre>
+              </center>
+       </section>
+       
+
+       <pre>
+       <section class="resume__description">
+              Resultat :
+              <center>
+                  
+        <code  class="language-javaScript">
+              {{poste.resultat}}
+        </code>
+  
+              </center>
+       </section>
+</pre>
+
+</section>
+{% endblock content %}

@@ -1,0 +1,28 @@
+{% extends 'base.html' %} {% load static %} {% block content %}
+
+
+<!-- blogs section starts  -->
+
+
+
+
+
+
+
+<section class="services section container" id="services">
+
+<div class="card">
+    <img src="{{blog.image.url}}" class="" alt="...">
+    <br>
+    <div class="">
+      <h5 class="services__title">{{blog.title}}</h5>
+     <p class="full">{{blog.full_description}}</p>
+      <p class="card-text">Last updated 3 mins ago</p>
+    </div>
+  </div>
+</section>
+
+
+
+
+{% endblock content %}
