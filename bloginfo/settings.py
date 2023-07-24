@@ -24,11 +24,21 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = "django-insecure-ho!vv9jpmtqr1qt2=4ih068e+1)u2qot85zc@ss-(^=x&jby4w"
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
-CSRF_TRUSTED_ORIGINS = ["cours-production.up.railway.app","127.0.0.1"]
+DEBUG = True
+
 ALLOWED_HOSTS = ["cours-production.up.railway.app","127.0.0.1"]
 
+CSRF_COOKIE_SECURE = True  # CSRF cookie enabled only Https server
+CSRF_COOKIE_HTTPONLY = True  # CSRF stored in http only cookie
+CSRF_TESTED_ORIGINS = [
+"http://localhost:8000"
+]
+CSRF_COOKIE_SAMESITE = "Lax"  # Samesite "Lax" - Protection against csrf attacks
 
+MIDDLEWARE = [
+
+'django.middleware.csrf.CsrfViewMiddleware'
+]
 # Application definition
 
 INSTALLED_APPS = [
@@ -41,17 +51,6 @@ INSTALLED_APPS = [
     "blog"
 ]
 
-CSRF_COOKIE_SECURE = True  # CSRF cookie enabled only Https server
-CSRF_COOKIE_HTTPONLY = True  # CSRF stored in http only cookie
-CSRF_TESTED_ORIGINS = [
-"http://localhost:8000"
-]
-CSRF_COOKIE_SAMESITE = "Lax"  # Samesite "Lax" - Protection against csrf attacks
-
-MIDDLEWARE = [
-'django.middleware.csrf.CsrfViewMiddleware'
-]
-
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
     "whitenoise.middleware.WhiteNoiseMiddleware",
@@ -62,6 +61,8 @@ MIDDLEWARE = [
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
 ]
+
+CSRF_TRUSTED_ORIGINS = ['https://*.mydomain.com','https://*.127.0.0.1']
 
 ROOT_URLCONF = "bloginfo.urls"
 
