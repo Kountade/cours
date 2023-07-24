@@ -27,6 +27,8 @@ SECRET_KEY = "django-insecure-ho!vv9jpmtqr1qt2=4ih068e+1)u2qot85zc@ss-(^=x&jby4w
 DEBUG = True
 
 ALLOWED_HOSTS = ["cours-production.up.railway.app","127.0.0.1"]
+CSRF_TRUSTED_ORIGINS = ["cours-production.up.railway.app","127.0.0.1"]
+
 
 CSRF_COOKIE_SECURE = True  # CSRF cookie enabled only Https server
 CSRF_COOKIE_HTTPONLY = True  # CSRF stored in http only cookie
@@ -62,7 +64,6 @@ MIDDLEWARE = [
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
 ]
 
-CSRF_TRUSTED_ORIGINS = ['https://*.mydomain.com','https://*.127.0.0.1']
 
 ROOT_URLCONF = "bloginfo.urls"
 
