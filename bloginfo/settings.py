@@ -27,7 +27,7 @@ SECRET_KEY = "django-insecure-ho!vv9jpmtqr1qt2=4ih068e+1)u2qot85zc@ss-(^=x&jby4w
 DEBUG = True
 
 ALLOWED_HOSTS = ["cours-production.up.railway.app","127.0.0.1"]
-CSRF_TRUSTED_ORIGINS = ["cours-production.up.railway.app","127.0.0.1"]
+CSRF_TRUSTED_ORIGINS = ["cours-production.up.railway.app","https://*.127.0.0.1"]
 
 
 CSRF_COOKIE_SECURE = True  # CSRF cookie enabled only Https server
