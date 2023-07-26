@@ -1544,6 +1544,7 @@ a {
 .services__title {
   margin-bottom: 0.8em;
   text-align: center;
+  font-size: 28px
 }
 
 .resume__description {
@@ -1773,3 +1774,5 @@ a {
 .p {
   word-wrap: break-word;
 }
+
+services__title
