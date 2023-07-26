@@ -902,7 +902,6 @@ ul {
 
 .footer-logo .img-fluid {
 
-
   border-radius: 50%;
   width: 30%;
 
@@ -1526,9 +1525,6 @@ a {
   left: 0.9rem;
 }
 
-.services__title {
-  margin-bottom: 0.8em;
-}
 
 
 .card-title {
@@ -1544,7 +1540,7 @@ a {
 .services__title {
   margin-bottom: 0.8em;
   text-align: center;
-  font-size: 28px
+  font-size: 40px
 }
 
 .resume__description {
@@ -1774,5 +1770,3 @@ a {
 .p {
   word-wrap: break-word;
 }
-
-services__title
