@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap');
+
+
+
 * {
   font-family: 'Nunito', sans-serif;
   margin: 0;
@@ -288,8 +292,6 @@ section {
 
 
 
-
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&display=swap');
 
 
 
@@ -1227,37 +1229,6 @@ ul {
 
 
 
-/* CSS */
-.button-30 {
-  align-items: center;
-  appearance: none;
-  background-color: #FCFCFD;
-  border-radius: 4px;
-  border-width: 0;
-  box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
-  box-sizing: border-box;
-  color: #36395A;
-  cursor: pointer;
-  display: inline-flex;
-  font-family: "JetBrains Mono", monospace;
-  height: 48px;
-  justify-content: center;
-  line-height: 1;
-  list-style: none;
-  overflow: hidden;
-  padding-left: 16px;
-  padding-right: 16px;
-  position: relative;
-  text-align: left;
-  text-decoration: none;
-  transition: box-shadow .15s, transform .15s;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-  white-space: nowrap;
-  will-change: box-shadow, transform;
-  font-size: 18px;
-}
 
 .button-30:focus {
   box-shadow: #D6D6E7 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
@@ -1491,39 +1462,6 @@ a {
   margin: auto;
 }
 
-.services__dot {
-  position: absolute;
-  left: 0;
-  right: 0;
-  width: 100%;
-  height: 100%;
-  animation: service-dot 2s linear infinite;
-  animation-play-state: paused;
-}
-
-.services__item:hover .services__dot {
-  animation-play-state: running;
-}
-
-@keyframes service-dot {
-  0% {
-    transform: rotate(0deg);
-  }
-
-  100% {
-    transform: rotate(1turn);
-  }
-}
-
-.dot {
-  width: 33px;
-  height: 33px;
-  background-color: var(--title--color);
-  border-radius: 50%;
-  position: absolute;
-  top: 0;
-  left: 0.9rem;
-}
 
 
 
@@ -1595,133 +1533,6 @@ a {
   outline: none;
 }
 
-.copy-text button {
-  padding: 10px;
-  background: #5784f5;
-  color: #fff;
-  font-size: 18px;
-  border: none;
-  outline: none;
-  border-radius: 10px;
-  cursor: pointer;
-}
-
-.copy-text button:active {
-  background: #809ce2;
-}
-
-.copy-text button:before {
-  content: "Copied";
-  position: absolute;
-  top: -45px;
-  right: 0px;
-  background: #5c81dc;
-  padding: 8px 10px;
-  border-radius: 20px;
-  font-size: 15px;
-  display: none;
-}
-
-.copy-text button:after {
-  content: "";
-  position: absolute;
-  top: -20px;
-  right: 25px;
-  width: 10px;
-  height: 10px;
-  background: #5c81dc;
-  transform: rotate(45deg);
-  display: none;
-}
-
-.copy-text.active button:before,
-.copy-text.active button:after {
-  display: block;
-}
-
-
-
-
-.courses .box-container {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (minmax(30rem, 1fr))[auto-fit];
-  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
-  gap: 2rem;
-}
-
-.courses .box-container .box {
-  position: relative;
-  padding: 2rem;
-  border: 0.1rem solid #999;
-  overflow: hidden;
-  text-align: center;
-}
-
-.courses .box-container .box:hover .content {
-  opacity: 1;
-}
-
-.courses .box-container .box .image img {
-  width: 100%;
-}
-
-.courses .box-container .box .image h3 {
-  font-size: 2rem;
-  color: #263238;
-  font-weight: normal;
-  padding-bottom: 1rem;
-}
-
-.courses .box-container .box .content {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-flow: column;
-  flex-flow: column;
-  background: #44bb6a;
-  padding: 2rem;
-  opacity: 0;
-}
-
-.courses .box-container .box .content .stars {
-  padding-bottom: 2rem;
-}
-
-.courses .box-container .box .content .stars i {
-  font-size: 1.7rem;
-  color: #ff0;
-}
-
-.courses .box-container .box .content h3 {
-  font-size: 2rem;
-  color: #fff;
-}
-
-.courses .box-container .box .content p {
-  font-size: 1.4rem;
-  color: #fff;
-  padding: 1.5rem 0;
-  line-height: 2;
-}
-
-.courses .box-container .box .content .btn:hover {
-  background: #ff0;
-  color: #263238;
-}
 
 
 
