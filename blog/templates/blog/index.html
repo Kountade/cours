@@ -75,46 +75,37 @@
          <section class="topcours" id="services">
 
 
-    <div class="row">
-    
-      {% for top  in list_top %}
-  
-      <div class="col-md-3 blog">
+          <div class="row">
+            {% for top  in list_top %}
+        
+            <div class="col-md-3 blog">
+        
+              <div class="card">
+                
 
-        <div class="box">
-          <div class="image">
-              <img src="{{top.image.url}}" alt="">
-              <h3></h3>
+                <div class="image">
+                    <img src="{{top.image.url}}" alt="">
+                </div>
+                <p class="services__title text-lg ">{{top.title}}</p>
+                <div class="content">
+                  <div class="stars">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star-half-alt"></i>
+                  </div>
+                </div>
+            </div>
+        
+          
+           <br>
+          
           </div>
-          <div class="content">
-              <div class="stars">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star-half-alt"></i>
-              </div>
-              <h3> {{top.title}}</h3>
-              <p></p>
-             
-          </div>
-      </div>
-
-
-
-
-
-
-
-
-    
-     <br>
-    
-    </div>
-  
-   
-  
-    {% endfor %}
-    </div> 
+        
+         
+        
+          {% endfor %}
+          </div> 
   </section>
 
 
@@ -131,6 +122,5 @@
 
 
 
-       
       
 {% endblock content %}

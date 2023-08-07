@@ -1773,3 +1773,11 @@ a {
 .p {
   word-wrap: break-word;
 }
+
+
+.image-personnalisee {
+  width: 200px;
+
+  height: 200px;
+
+}
