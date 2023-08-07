@@ -26,8 +26,8 @@ SECRET_KEY = "django-insecure-ho!vv9jpmtqr1qt2=4ih068e+1)u2qot85zc@ss-(^=x&jby4w
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["https://codelivecam.com/","127.0.0.1"]
-CSRF_TRUSTED_ORIGINS = ["https://*.https://codelivecam.com/","https://*.127.0.0.1"]
+ALLOWED_HOSTS = ["https://codelivecam.com","127.0.0.1"]
+CSRF_TRUSTED_ORIGINS = ["https://*.https://codelivecam.com","https://*.127.0.0.1"]
 
 
 CSRF_COOKIE_SECURE = True  # CSRF cookie enabled only Https server
