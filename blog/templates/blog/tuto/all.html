@@ -1,0 +1,54 @@
+{% extends 'base.html' %} {% load static %} {% block content %}
+
+
+
+
+<section class="home" id="home">
+  <center><h1><marquee> Toutes les Series de Tutorials</marquee></h1></center>
+
+
+        <section class="" id="services">
+
+          <div class="row">
+           {% for tutocategorie  in list_tuto %}
+           <! -- et terminent avec -->
+            <div class="col-md-3 blog">
+        
+              <div class="card">
+                <div class="image">
+                    <img src="{{tutocategorie.image.url}}" alt="">
+                    
+                    <p class="full">{{tutocategorie.description}}</p>
+                   
+                </div>
+                <div class="content">
+                 status: inactif
+                </div>
+                <div class="content">
+                  Serie vidéo:{{tutocategorie.title}}
+                 </div>
+                <div class="content">
+                  <button type="button" class="btn btn-primary">Lire la serie</button>
+                </div>
+            </div>
+         
+           <br>
+          </div>
+        
+          {% endfor %}
+          </div> 
+        </section>
+      
+
+  
+
+</section>
+
+<!-- home section ends -->
+    
+
+
+
+
+
+{% endblock content %}
