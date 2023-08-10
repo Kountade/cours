@@ -81,7 +81,7 @@ class blog(models.Model):
     image = models.ImageField()
     date_added = models.DateTimeField(auto_now_add=True)
     description = models.TextField(max_length=50000)
-    full_description = models.TextField(max_length=50000000)
+    full_description = models.TextField(max_length=50000000,)
 
     class Meta:
         ordering = ['-date_added']
