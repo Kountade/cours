@@ -2,19 +2,6 @@
 
 
 
-* {
-  font-family: 'Nunito', sans-serif;
-  margin: 0;
-  padding: 0;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  text-decoration: none;
-  outline: none;
-  border: none;
-  text-transform: capitalize;
-  -webkit-transition: all .2s linear;
-  transition: all .2s linear;
-}
 
 html {
   font-size: 62.5%;
@@ -23,17 +10,7 @@ html {
   overflow-x: hidden;
 }
 
-html::-webkit-scrollbar {
-  width: 1rem;
-}
 
-html::-webkit-scrollbar-track {
-  background: #000;
-}
-
-html::-webkit-scrollbar-thumb {
-  background: #f00;
-}
 
 body {
   background: #000;
@@ -295,11 +272,6 @@ section {
 
 
 
-
-html {
-  scroll-behavior: smooth;
-}
-
 html::-webkit-scrollbar {
   width: .8rem;
 }
@@ -313,9 +285,7 @@ html::-webkit-scrollbar-thumb {
   border-radius: 5rem;
 }
 
-body {
-  background: var(--bg);
-}
+
 
 
 
