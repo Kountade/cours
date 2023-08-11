@@ -10,7 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
-from pathlib import Path 
+from pathlib import Path
 import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -27,19 +27,19 @@ SECRET_KEY = "django-insecure-ho!vv9jpmtqr1qt2=4ih068e+1)u2qot85zc@ss-(^=x&jby4w
 DEBUG = True
 
 ALLOWED_HOSTS = ["*"]
-CSRF_TRUSTED_ORIGINS = ["https://*.cours-production.up.railway.app","https://*.127.0.0.1"]
+CSRF_TRUSTED_ORIGINS = ["https://*.codelivecam.com", "https://*.127.0.0.1"]
 
 
 CSRF_COOKIE_SECURE = True  # CSRF cookie enabled only Https server
 CSRF_COOKIE_HTTPONLY = True  # CSRF stored in http only cookie
 CSRF_TESTED_ORIGINS = [
-"http://localhost:8000"
+    "http://localhost:8000"
 ]
 CSRF_COOKIE_SAMESITE = "Lax"  # Samesite "Lax" - Protection against csrf attacks
 
 MIDDLEWARE = [
 
-'django.middleware.csrf.CsrfViewMiddleware'
+    'django.middleware.csrf.CsrfViewMiddleware'
 ]
 # Application definition
 
@@ -51,8 +51,8 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "blog",
-   
-   
+
+
 ]
 
 MIDDLEWARE = [
@@ -94,22 +94,22 @@ WSGI_APPLICATION = "bloginfo.wsgi.application"
 
 DATABASES = {
     "default": {
-       "ENGINE": "django.db.backends.sqlite3",
-       "NAME": BASE_DIR / "db.sqlite3",
+        "ENGINE": "django.db.backends.sqlite3",
+        "NAME": BASE_DIR / "db.sqlite3",
     }
 }
 
 
-#DATABASES = {
+# DATABASES = {
 #    "default": {
-    #    "ENGINE": "django.db.backends.postgresql",
- #       "HOST":"127.0.0.1",
-      #  "USER":"postgres",
-      #  "NAME":"codelive",
-     #   "PASSWORD":"Postgre55555",
-    #    "PORT":"5432"
-   # }
-#}
+#    "ENGINE": "django.db.backends.postgresql",
+#       "HOST":"127.0.0.1",
+#  "USER":"postgres",
+#  "NAME":"codelive",
+#   "PASSWORD":"Postgre55555",
+#    "PORT":"5432"
+# }
+# }
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
