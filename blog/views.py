@@ -120,10 +120,14 @@ def phpdetail(request, title: str):
 
 def javascript(request):
 
-    scripts1 = coursjavascript.objects.filter(categorie_id=2).values()
-    scripts2 = coursjavascript.objects.filter(categorie_id=3).values()
-    scripts3 = coursjavascript.objects.filter(categorie_id=4).values()
-    return render(request, "blog/javascript/javascript.html", {"scripts1": scripts1, "scripts2": scripts2, "scripts3": scripts3})
+    scripts1 = coursjavascript.objects.filter(categorie_id=1).values()
+    scripts2 = coursjavascript.objects.filter(categorie_id=2).values()
+    scripts3 = coursjavascript.objects.filter(categorie_id=3).values()
+    scripts4 = coursjavascript.objects.filter(categorie_id=3).values()
+    scripts5 = coursjavascript.objects.filter(categorie_id=3).values()
+    scripts6 = coursjavascript.objects.filter(categorie_id=3).values()
+    scripts7 = coursjavascript.objects.filter(categorie_id=3).values()
+    return render(request, "blog/javascript/javascript.html", {"scripts1": scripts1, "scripts2": scripts2, "scripts3": scripts3, "scripts4": scripts4, "scripts5": scripts5, "scripts6": scripts7, "scripts2": scripts7})
 
 
 def javascriptdetail(request, title: str):

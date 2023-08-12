@@ -1,6 +1,7 @@
 {% extends 'base.html' %} {% load static %} {% block content %}
 
-
+<br>
+<br>
 <section class="services section container" id="services">
     <div class="row">
     <div class="col-lg-4">
@@ -56,9 +57,9 @@
         <div class="card-body">
             <h5 class="card-title ">LES OBJET EN JAVASCRIPT</h5>
             <!-- Default List group -->
-            {% for dt4 in data4 %}
+            {% for sct4 in scripts4 %}
             <ul class="list-group">
-                <li class="list-group-item"><a href="#"class="underline">{{dt4.title}}</a></li>
+                <li class="list-group-item"><a href="#"class="underline">{{sct4.title}}</a></li>
               
             </ul><!-- End Default List group -->
             {% endfor %}
@@ -71,9 +72,9 @@
         <div class="card-body">
             <h5 class="card-title ">LES TYPES EN JAVASCRIPT</h5>
             <!-- Default List group -->
-            {% for dt5 in data5 %}
+            {% for sct5 in scripts5 %}
             <ul class="list-group">
-                <li class="list-group-item"><a href="#"class="underline">{{dt5.title}}</a></li>
+                <li class="list-group-item"><a href="#"class="underline">{{sct5.title}}</a></li>
               
             </ul><!-- End Default List group -->
             {% endfor %}
@@ -86,9 +87,9 @@
         <div class="card-body">
             <h5 class="card-title ">LES VARIABLES SUPERGLOBALES PHP</h5>
             <!-- Default List group -->
-            {% for dt6 in data6 %}
+            {% for sct6 in scripts6 %}
             <ul class="list-group">
-                <li class="list-group-item"><a href="#"class="underline">{{dt6.title}}</a></li>
+                <li class="list-group-item"><a href="#"class="underline">{{sct6.title}}</a></li>
               
             </ul><!-- End Default List group -->
             {% endfor %}
@@ -102,9 +103,9 @@
         <div class="card-body">
             <h5 class="card-title ">LES EXCEPTIONS  ET  LES MODULES</h5>
             <!-- Default List group -->
-            {% for dt7 in data7 %}
+            {% for sct7 in scripts7 %}
             <ul class="list-group">
-                <li class="list-group-item"><a href="#"class="underline">{{dt7.title}}</a></li>
+                <li class="list-group-item"><a href="#"class="underline">{{sct7.title}}</a></li>
               
             </ul><!-- End Default List group -->
             {% endfor %}
@@ -123,9 +124,9 @@
         <div class="card-body">
             <h5 class="card-title ">ECMASCRIPT 6 OU  JAVASCRIPT ES6</h5>
             <!-- Default List group -->
-            {% for dt8 in data8 %}
+            {% for sct8 in scripts8 %}
             <ul class="list-group">
-                <li class="list-group-item"><a href="#"class="underline">{{coursphp.title}}</a></li>
+                <li class="list-group-item"><a href="#"class="underline">{{sct8.title}}</a></li>
               
             </ul><!-- End Default List group -->
             {% endfor %}
@@ -142,9 +143,9 @@
         <div class="card-body">
             <h5 class="card-title ">JAVASCRIPT ASYNCHRONE</h5>
             <!-- Default List group -->
-            {% for dt9 in data9 %}
+            {% for sct9 in scripts9 %}
             <ul class="list-group">
-                <li class="list-group-item"><a href="#"class="underline">{{coursphp.title}}</a></li>
+                <li class="list-group-item"><a href="#"class="underline">{{sct10.title}}</a></li>
               
             </ul><!-- End Default List group -->
             {% endfor %}
@@ -163,9 +164,9 @@
         <div class="card-body">
             <h5 class="card-title ">   NOTIONS AVANCÉES</h5>
             <!-- Default List group -->
-            {% for dt10 in data10 %}
+            {% for sct10 in scripts10 %}
             <ul class="list-group">
-                <li class="list-group-item"><a href="#"class="underline">{{coursphp.title}}</a></li>
+                <li class="list-group-item"><a href="#"class="underline">{{sct10.title}}</a></li>
               
             </ul><!-- End Default List group -->
             {% endfor %}
