@@ -5,39 +5,40 @@
        <br>
        <br>
        <h5 class="card-title "> {{postedrt.title}}</h5>
-       <pre>
-       <section>
-
-              {{postedrt.description}}
-  
-       </section>
-</pre>
-      
-
-       <section>
-              Exemple :
-              <center>
-                     <pre>
-                            <code>
-                              {{postedrt.code}}
-                            </code>
-                           </pre>
-              </center>
-       </section>
+    
+               <article class="descrip">
+               
+                      {{postedrt.description}}
+                 
+               </article>
        
-
-       <pre>
+      
+      
+               <p class="fulls">
+                     Exemple :
+                     <center>
+                            <pre  class="fulls">
+                                   <code  class="language-PHP">
+                                     {{postedrt.code}}
+                                   </code>
+                            </pre> 
+                     </center>
+             
+              </p>
        <section>
-              Resultat :
+               <article class="descrip">
+              Resultat : 
               <center>
-                  
-        <code  class="language-Dart">
+                      </article>
+                     <pre>       
+        <code  class="language-PHP">
+           
               {{postedrt.resultat}}
         </code>
-  
+       </pre>
               </center>
        </section>
-</pre>
+
 
 </section>
 {% endblock content %}
