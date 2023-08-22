@@ -20,7 +20,7 @@
               <div class="card">
                 <div class="image">
                     <img src="{{blog.image.url}}" alt="">
-                    <p class="services__title text-lg underline">{{blog.title}}</p>
+                    <p class="services__title text-lg underline">{{blog.title |safe}}</p>
                     <p class="full">{{blog.description}}</p>
                   <p class="services__title text-lg ">  {{blog.date_added}}</p>
                   

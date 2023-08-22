@@ -1,5 +1,6 @@
 from django.db import models
 from django.db.models.fields.related import ForeignKey
+from ckeditor.fields import RichTextField
 
 
 class top(models.Model):
@@ -80,8 +81,8 @@ class blog(models.Model):
     title = models.CharField(max_length=500)
     image = models.ImageField()
     date_added = models.DateTimeField(auto_now_add=True)
-    description = models.TextField(max_length=50000)
-    full_description = models.TextField(max_length=50000000,)
+    description = RichTextField()
+    full_description = RichTextField()
 
     class Meta:
         ordering = ['-date_added']
