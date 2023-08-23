@@ -30,11 +30,6 @@ def home(request):
     return render(request, "blog/index.html", content)
 
 
-def acceuil(request):
-
-    return render(request, "blog/acceuil.html", )
-
-
 def galerie(request):
     list_galerie = gale.objects.all()
     content = {"list_galerie": list_galerie}
