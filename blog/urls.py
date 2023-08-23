@@ -8,8 +8,7 @@ urlpatterns = [
     path("service", views.services, name="services"),
     path("illustrators", views.illustrators, name="illustrators"),
     path("blogs", views.blogs, name="blogs"),
-
-    path('detail/<int:myid>', views.detail, name="detail"),
+    path('detail/<str:title>', views.detail, name="detail"),
     path("allserie", views.allserie, name="allserie"),
     path("apropos", views.apropos, name="apropos"),
     path("photoshos", views.photoshos, name="photoshos"),

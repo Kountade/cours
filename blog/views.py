@@ -2,6 +2,7 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from .models import *
 import requests
+from django.core.paginator import Paginator
 
 API_KEY = "758811fbc4dc45fa9ad7c4f52f786b6e"
 
@@ -54,13 +55,17 @@ def illustrators(request):
 
 def blogs(request):
     list_blog = blog.objects.all()
-    context = {"list_blog": list_blog}
+    page = Paginator(list_blog, 8)
+    page_list = request.GET.get('page')
+    page = page.get_page(page_list)
+
+    context = {"page": page}
 
     return render(request, "blog/blog.html", context)
 
 
-def detail(request, myid):
-    product_object = blog.objects.get(id=myid)
+def detail(request, title: str):
+    product_object = blog.objects.get(title=title)
     return render(request, 'blog/blog_plus.html', {'blog': product_object})
 
 

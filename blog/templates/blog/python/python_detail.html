@@ -1,14 +1,14 @@
 {% extends 'base.html' %} {% load static %} {% block content %}
 
 
-<section class="services section container" id="services">
+<section class="services section container  bg-white shadow" id="services">
        <br>
        <br>
        <h5 class="card-title "> {{postepy.title}}</h5>
-       <article class="descrip">
-               
-              {{postepy.description}}
-         
+       <article class="">
+               <table>
+              {{postepy.description|safe}}
+               </table>
        </article>
        
       

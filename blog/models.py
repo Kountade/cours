@@ -42,7 +42,7 @@ class illustrator(models.Model):
     title = models.CharField(max_length=500)
     image = models.ImageField()
     date_added = models.DateTimeField(auto_now_add=True)
-    description = models.TextField(max_length=50000)
+    description = RichTextField()
 
     class Meta:
         ordering = ['-date_added']
@@ -55,7 +55,7 @@ class photoshop(models.Model):
     title = models.CharField(max_length=500)
     image = models.ImageField()
     date_added = models.DateTimeField(auto_now_add=True)
-    description = models.TextField(max_length=50000)
+    description = RichTextField()
 
     class Meta:
         ordering = ['-date_added']
@@ -67,7 +67,7 @@ class photoshop(models.Model):
 class service(models.Model):
     title = models.CharField(max_length=500)
     image = models.ImageField()
-    description = models.TextField(max_length=50000)
+    description = RichTextField()
     date_added = models.DateTimeField(auto_now_add=True)
 
     class Meta:
@@ -103,7 +103,7 @@ class coursphp(models.Model):
     categorie = models.ForeignKey(
         Categoryphp, on_delete=models.SET_NULL, blank=True, null=True)
     title = models.CharField(max_length=500)
-    description = models.TextField(max_length=50000)
+    description = RichTextField()
     code = models.TextField(max_length=50000)
     resultat = models.TextField(max_length=50000)
     date_added = models.DateTimeField(auto_now_add=True)
@@ -127,7 +127,7 @@ class coursjava(models.Model):
     categorie = models.ForeignKey(
         Categoryjava, on_delete=models.SET_NULL, blank=True, null=True)
     title = models.CharField(max_length=500)
-    description = models.TextField(max_length=50000)
+    description = RichTextField()
     code = models.TextField(max_length=50000)
     date_added = models.DateTimeField(auto_now_add=True)
 
@@ -152,7 +152,7 @@ class coursjavascript(models.Model):
     categorie = models.ForeignKey(
         Categoryjavas, on_delete=models.SET_NULL, blank=True, null=True)
     title = models.CharField(max_length=500)
-    description = models.TextField(max_length=50000)
+    description = RichTextField()
     code = models.TextField(max_length=50000)
     date_added = models.DateTimeField(auto_now_add=True)
 
@@ -177,7 +177,7 @@ class coursdart(models.Model):
     categorie = models.ForeignKey(
         Categorydart, on_delete=models.SET_NULL, blank=True, null=True)
     title = models.CharField(max_length=500)
-    description = models.TextField(max_length=50000)
+    description = RichTextField()
     code = models.TextField(max_length=50000)
     date_added = models.DateTimeField(auto_now_add=True)
     resultat = models.TextField(max_length=50000)
@@ -201,7 +201,7 @@ class courspython(models.Model):
     categorie = models.ForeignKey(
         Categorypython, on_delete=models.SET_NULL, blank=True, null=True)
     title = models.CharField(max_length=500)
-    description = models.TextField(max_length=50000)
+    description = RichTextField()
     code = models.TextField(max_length=50000)
     date_added = models.DateTimeField(auto_now_add=True)
     resultat = models.TextField(max_length=50000)
@@ -225,7 +225,7 @@ class courscsharp(models.Model):
     categorie = models.ForeignKey(
         Categorycsharp, on_delete=models.SET_NULL, blank=True, null=True)
     title = models.CharField(max_length=500)
-    description = models.TextField(max_length=50000)
+    description = RichTextField()
     code = models.TextField(max_length=50000)
     date_added = models.DateTimeField(auto_now_add=True)
     resultat = models.TextField(max_length=50000)

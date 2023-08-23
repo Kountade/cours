@@ -3,35 +3,29 @@
 
 
 
-<section class="home" id="home">
+<section class="home bg-white" id="home">
 
-  <div class="swiper home-slider">
-
-      
-
+  <div class="container ">
         <section class="" id="services">
 
 
           <div class="row">
-            {% for blog  in list_blog %}
+            {% for blog  in page.object_list %}
         
             <div class="col-md-3 blog">
         
+              
               <div class="card">
-                <div class="image">
-                    <img src="{{blog.image.url}}" alt="">
+               
+                    <img src="{{blog.image.url}}" alt="" >
                     <p class="services__title text-lg underline">{{blog.title |safe}}</p>
-                    <p class="full">{{blog.description}}</p>
+                    <article class=" descripblo">
+                      {{blog.description |safe}}
+                     </article>
                   <p class="services__title text-lg ">  {{blog.date_added}}</p>
                   
-                 
-                   
-                </div>
                 <div class="content">
-                   
-               
-                  
-                    <a href="{% url 'detail' blog.id %}" class="btnn">Lire la suite</a>
+                  <a  href="{% url 'detail' blog.title %}" class="page-link btn btn-primary">voir plus </a>
                 </div>
             </div>
         
@@ -54,10 +48,41 @@
 </section>
 
 <!-- home section ends -->
+    <div class="container">
+<div class="row my-5 col-md-6 mx-auto">
+<div class="col-md-4 offset-md-3 ">
+  <div class="ml-7 page-link btn btn-primary "> page: {{page.number}}/{{page.paginator.num_pages}}</div>
+  <nav aria-label="...">
+    <ul class="pagination">
+      <li class="page-item ">
+        {% if page.has_previous %}
+        <a class="page-link btn btn-primary" href="{% url 'blogs' %}?page={{ page.previous_page_number }}">Précédente</a>
+        {% endif %}
+      </li>
+      {% for num_page in page.paginator.page_range%}
+      <br/>
+       {% if page_number == num_page %}
+
+      <li class="page-item " aria-current="page">
+        <a class="page-link" href="{% url 'blogs' %}?page={{ page.number }}">{{page.number}}</a>
+      </li>
+      
+       {% endif %}
+       <br/>
+      {% endfor %}
+      
+
+    <li class="page-item"><a class="page-link" href="{% url 'blogs' %}?page={{ page.number }}">{{page.number}}</a></li>
     
-
-
-
-
+      <li class="page-item">
+       {% if page.has_next %}
+        <a class="page-link btn btn-primary" href="{% url 'blogs' %}?page={{ page.next_page_number }}">Suivante</a>
+        {% endif %}
+      </li>
+    </ul>
+  </nav>
+</div>
+</div>
+</div>
 
 {% endblock content %}
