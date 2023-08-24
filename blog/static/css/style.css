@@ -37,9 +37,6 @@ section {
 
 
 
-
-
-
 .btn:hover {
   -webkit-transform: scale(1.1);
   transform: scale(0.5);
@@ -1468,5 +1465,6 @@ a {
   white-space: pre-line;
   margin-left: 4%;
   margin-right: 4%;
+  padding: 0%;
 
 }
