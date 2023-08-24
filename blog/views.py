@@ -22,7 +22,7 @@ def news(request):
     return render(request, 'blog/new.html', context)
 
 
-def home(request):
+def acceuil(request):
 
     list_top = top.objects.all()
     content = {"list_top": list_top}
