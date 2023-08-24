@@ -52,6 +52,7 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "blog",
     "ckeditor",
+    'django_ckeditor_5',
 
 
 ]
@@ -165,8 +166,6 @@ CKEDITOR_CONFIGS = {
         'toolbar_Basic': [
             ['Source', '-', 'Bold', 'Italic']
         ],
-
-
         'toolbar_YourCustomToolbarConfig': [
             {'name': 'document', 'items': [
                 'Source', '-', 'Save', 'NewPage', 'Preview', 'Print', '-', 'Templates']},
@@ -200,7 +199,6 @@ CKEDITOR_CONFIGS = {
                 'Maximize',
 
             ]},
-
         ],
         'toolbar': 'YourCustomToolbarConfig',  # put selected toolbar config here
         'toolbarGroups': [{'name': 'document', 'groups': ['mode', 'document', 'doctools']}],
@@ -208,7 +206,7 @@ CKEDITOR_CONFIGS = {
         # 'width': '100%',
         # 'filebrowserWindowHeight': 725,
         # 'filebrowserWindowWidth': 940,
-        'toolbarCanCollapse': True,
+        # 'toolbarCanCollapse': True,
         # 'mathJaxLib': '//cdn.mathjax.org/mathjax/2.2-latest/MathJax.js?config=TeX-AMS_HTML',
         'tabSpaces': 4,
         'extraPlugins': ','.join([
@@ -219,7 +217,7 @@ CKEDITOR_CONFIGS = {
             'autoembed',
             'embedsemantic',
             'autogrow',
-            'devtools',
+            # 'devtools',
             'widget',
             'lineutils',
             'clipboard',
@@ -227,7 +225,5 @@ CKEDITOR_CONFIGS = {
             'dialogui',
             'elementspath'
         ]),
-
     }
-
 }

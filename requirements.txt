@@ -6,6 +6,7 @@ charset-normalizer==3.1.0
 dj-database-url==2.0.0
 Django==4.2.2
 django-ckeditor==6.7.0
+django-ckeditor-5==0.2.9
 django-embed-video==1.4.9
 django-environ==0.10.0
 django-js-asset==2.1.0

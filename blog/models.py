@@ -1,6 +1,7 @@
 from django.db import models
 from django.db.models.fields.related import ForeignKey
 from ckeditor.fields import RichTextField
+from django_ckeditor_5.fields import CKEditor5Field
 
 
 class top(models.Model):
@@ -42,7 +43,7 @@ class illustrator(models.Model):
     title = models.CharField(max_length=500)
     image = models.ImageField()
     date_added = models.DateTimeField(auto_now_add=True)
-    description = RichTextField()
+    description = models.TextField(max_length=50000)
 
     class Meta:
         ordering = ['-date_added']
@@ -55,7 +56,7 @@ class photoshop(models.Model):
     title = models.CharField(max_length=500)
     image = models.ImageField()
     date_added = models.DateTimeField(auto_now_add=True)
-    description = RichTextField()
+    description = models.TextField(max_length=50000)
 
     class Meta:
         ordering = ['-date_added']
@@ -67,7 +68,7 @@ class photoshop(models.Model):
 class service(models.Model):
     title = models.CharField(max_length=500)
     image = models.ImageField()
-    description = RichTextField()
+    description = models.TextField(max_length=50000)
     date_added = models.DateTimeField(auto_now_add=True)
 
     class Meta:
