@@ -28,7 +28,7 @@ class Adminservice(admin.ModelAdmin):
 
 
 class Adminblog(admin.ModelAdmin):
-    list_display = ("title", "image", "description", "date_added")
+    list_display = ("title", "image", "full_description", "date_added")
 
 
 class Adminphotoshop(admin.ModelAdmin):
@@ -41,7 +41,7 @@ class AdminCategoryphp(admin.ModelAdmin):
 
 
 class Admincoursphp(admin.ModelAdmin):
-    list_display = ("categorie", "title", "code", "description", "date_added")
+    list_display = ("title", "categorie", "code", "description", "date_added")
 
 
 class AdminCategoryjavas(admin.ModelAdmin):
@@ -49,7 +49,7 @@ class AdminCategoryjavas(admin.ModelAdmin):
 
 
 class Admincoursjavascript(admin.ModelAdmin):
-    list_display = ("categorie", "title", "code", "description", "date_added")
+    list_display = ("title", "categorie", "code", "description", "date_added")
 
 
 class AdminCategoryjava(admin.ModelAdmin):
@@ -57,7 +57,7 @@ class AdminCategoryjava(admin.ModelAdmin):
 
 
 class Admincoursjava(admin.ModelAdmin):
-    list_display = ("categorie", "title", "code",
+    list_display = ("title", "categorie", "code",
                     "description", "date_added", "resultat")
 
 
@@ -66,7 +66,7 @@ class AdminCategorypython(admin.ModelAdmin):
 
 
 class Admincourspython(admin.ModelAdmin):
-    list_display = ("categorie", "title", "code",
+    list_display = ("title", "categorie", "code",
                     "description", "date_added", "resultat")
 
 
@@ -75,7 +75,7 @@ class AdminCategorydart(admin.ModelAdmin):
 
 
 class Admincoursdart(admin.ModelAdmin):
-    list_display = ("categorie", "title", "code",
+    list_display = ("title", "categorie",  "code",
                     "description", "date_added", "resultat")
 
 
@@ -84,7 +84,7 @@ class AdminCategorycsharp(admin.ModelAdmin):
 
 
 class Admincourscsharp(admin.ModelAdmin):
-    list_display = ("categorie", "title", "code",
+    list_display = ("title", "categorie", "code",
                     "description", "date_added", "resultat")
 
 

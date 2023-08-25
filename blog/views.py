@@ -26,7 +26,6 @@ def acceuil(request):
 
     list_top = top.objects.all()
     content = {"list_top": list_top}
-
     return render(request, "blog/index.html", content)
 
 

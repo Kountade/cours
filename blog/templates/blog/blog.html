@@ -18,9 +18,9 @@
               <div class="card">
                
                     <img src="{{blog.image.url}}" alt="" >
-                    <p class="services__title text-lg underline">{{blog.title |safe}}</p>
+                    <p class="services__title text-lg underline">{{blog.title|safe}}</p>
                     <article class="descripblo">
-                      {{blog.description |safe}}
+                      {{blog.full_description|truncatechars:70|safe}}
                      </article>
                   <p class="services__title text-lg ">  {{blog.date_added}}</p>
                   
