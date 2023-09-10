@@ -187,3 +187,12 @@ def allserie(request):
     list_tuto = tutocategorie.objects.all()
     content = {"list_tuto": list_tuto}
     return render(request, "blog/tuto/all.html", content)
+
+
+def user(request):
+
+    return render(request, "blog/login.html")
+
+
+def register(request):
+    return render(request, "blog/register.html")

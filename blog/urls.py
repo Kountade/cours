@@ -24,6 +24,8 @@ urlpatterns = [
     path('javascriptdetail/<str:title>',
          views.javascriptdetail, name="javascriptdetail"),
     path("detailcours", views.detailcours, name="detailcours"),
+    path("user", views.user, name="user"),
+    path("register", views.register, name="register"),
 
 
 
