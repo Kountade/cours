@@ -53,6 +53,7 @@ INSTALLED_APPS = [
     "blog",
     "ckeditor",
     'django_ckeditor_5',
+    "django_social_share",
 
 
 ]
