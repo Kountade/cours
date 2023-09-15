@@ -1,8 +1,11 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from .models import *
 import requests
 from django.core.paginator import Paginator
+from django.contrib.auth.models import User
+from django.contrib import messages
+from django.contrib.auth import authenticate, login, logout
 
 API_KEY = "758811fbc4dc45fa9ad7c4f52f786b6e"
 
@@ -22,7 +25,7 @@ def news(request):
     return render(request, 'blog/new.html', context)
 
 
-def acceuil(request):
+def acceuil(request,  *args, **kwargs):
 
     list_top = top.objects.all()
     content = {"list_top": list_top}
@@ -195,4 +198,38 @@ def user(request):
 
 
 def register(request):
+
+    if request.method == "POST":
+        username = request.POST['username']
+        firstname = request.POST['firstname']
+        lastname = request.POST['lastname']
+        email = request.POST['email']
+        password = request.POST['password']
+        passsword1 = request.POST['passsword1']
+        mon_utilisateur = User.objects.create_user(username, email, password)
+        mon_utilisateur.first_name = firstname
+        mon_utilisateur.last_name = lastname
+        mon_utilisateur.save()
+        messages.success(request, 'VOTRE COMPTE A ETE BIEN CREE')
+        return redirect('register')
+
     return render(request, "blog/register.html")
+
+
+def logIn(request):
+    if request.method == "POST":
+        username = request.POST['username']
+        password = request.POST['password']
+        user = authenticate(username=username, password=password)
+
+        if user is not None:
+            login(request, user)
+            firstname = user.first_name
+            messages.success(request, 'BIENVENUE ' + firstname)
+            return redirect('..')
+
+        else:
+            messages.error(request, 'Maivaise authentification')
+            return redirect('login')
+
+    return render(request, 'blog/login.html')

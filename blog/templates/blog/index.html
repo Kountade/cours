@@ -42,6 +42,20 @@
 
           <div class="swiper-slide slide" style="background: url(../static/images/web1.jpg) no-repeat;">
               <div class="content page-link btn btn-primary">
+                {% for message in  messages %}
+                <div class="alert alert-success bg-success text-light border-0 alert-dismissible fade show" role="alert">
+                {{message}}  {{firstname}} 
+                  <button type="button" class="btn-close btn-close-white" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+                {% endfor %}
+                
+{% if user.is_authenticated %}
+
+
+{% else %}
+
+<h3></h3>
+{% endif %}
                   <span>CODELIVECAM</span>
                   <h3>Code simple claire et explicite.</h3>
                   <div class="container">
@@ -72,7 +86,7 @@
               <div class="card">
                 
 
-                <div class="image">
+                <div class="card">
                     <img src="{{top.image.url}}" width="800" height="700"alt="">
                 </div>
                 <p class="services__title text-lg ">{{top.title}}</p>
