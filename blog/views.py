@@ -233,3 +233,9 @@ def logIn(request):
             return redirect('login')
 
     return render(request, 'blog/login.html')
+
+
+def log_out(request):
+    logout(request)
+    messages.success(request, 'Vous vous ete bien déconnte')
+    return redirect('..')

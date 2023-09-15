@@ -25,7 +25,8 @@ urlpatterns = [
          views.javascriptdetail, name="javascriptdetail"),
     path("detailcours", views.detailcours, name="detailcours"),
     path("register", views.register, name="register"),
-    path("login", views.logIn, name="login")
+    path("login", views.logIn, name="login"),
+    path("logout", views.log_out, name="logout"),
 
 
 
