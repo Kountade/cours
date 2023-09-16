@@ -1,3 +1,5 @@
+from bloginfo import settings
+from django.core.mail import send_mail, EmailMessage
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from .models import *
@@ -6,6 +8,7 @@ from django.core.paginator import Paginator
 from django.contrib.auth.models import User
 from django.contrib import messages
 from django.contrib.auth import authenticate, login, logout
+
 
 API_KEY = "758811fbc4dc45fa9ad7c4f52f786b6e"
 
@@ -205,12 +208,33 @@ def register(request):
         lastname = request.POST['lastname']
         email = request.POST['email']
         password = request.POST['password']
-        passsword1 = request.POST['passsword1']
+        password1 = request.POST['password1']
+        if User.objects.filter(username=username):
+            messages.error(request, "Ce nom est deja attribué")
+            return redirect('register')
+        if User.objects.filter(email=email):
+            messages.error(request, "cette email a deja un autre compte")
+            return redirect('register')
+        if not username.isalnum():
+            messages.error(request, "Le nom doit etre en alphanumeric")
+            return redirect("register")
+
+        if password != password1:
+            messages.error(request, "Les deux mots de pass ne corespond pas")
+            return redirect('register')
+
         mon_utilisateur = User.objects.create_user(username, email, password)
         mon_utilisateur.first_name = firstname
         mon_utilisateur.last_name = lastname
         mon_utilisateur.save()
         messages.success(request, 'VOTRE COMPTE A ETE BIEN CREE')
+        # mail de bienvenue
+        subject = "Bienvenu sur codelivecamp"
+        message = "Bienvenu " + mon_utilisateur.first_name + " " + \
+            mon_utilisateur.last_name + "\n Nous sommes heureux de votre confiance\n\n Merci"
+        from_email = settings.EMAIL_HOST_USER
+        to_list = [mon_utilisateur.email]
+        send_mail(subject, message, from_email, to_list, fail_silently=False)
         return redirect('register')
 
     return render(request, "blog/register.html")
