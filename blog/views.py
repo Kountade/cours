@@ -30,6 +30,7 @@ def news(request):
     url = f'https://newsapi.org/v2/top-headlines?language=en&category=technology&apiKey={API_KEY}'
     response = requests.get(url)
     data = response.json()
+    # print(data)
 
     articles = data['articles']
     articles
