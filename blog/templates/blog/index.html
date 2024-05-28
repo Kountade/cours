@@ -78,26 +78,23 @@
          <section class="topcours" id="services">
 
 
+
           <div class="row">
             {% for top  in list_top %}
         
             <div class="col-md-3 blog">
         
-              <div class="card">
+              
+              <div class="gallery">
+               
+                    <img src="{{top.image.url}}" alt="" >
+                    <p class="services__title text-lg underline">{{top.title|safe}}</p>
+                    <article class="descripblo">
+                    
+                     </article>
                 
-
-                <div class="card">
-                    <img src="{{top.image.url}}" width="800" height="700"alt="">
-                </div>
-                <p class="services__title text-lg ">{{top.title}}</p>
-                <div class="content">
-                  <div class="stars">
-                      <i class="fas fa-star"></i>
-                      <i class="fas fa-star"></i>
-                      <i class="fas fa-star"></i>
-                      <i class="fas fa-star-half-alt"></i>
-                  </div>
-                </div>
+                  
+               
             </div>
         
           

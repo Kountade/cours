@@ -1,70 +1,88 @@
 {% extends 'base.html' %} {% load static %} {% block content %}
 
+
+
+
 <section class="home bg-white" id="home">
-    <!-- blogs section starts  -->
+
+  <div class="container ">
+        <section class="" id="services">
 
 
-    <section class="services section container  bg-white shadow" id="services">
-        <br>
-        <br>
-        <br>
-        <div class="card">
-            <img src="{{blog.image.url}}" class="" alt="...">
-            <br>
-            <div class="">
-                <center>
-                    <div class="col-md-6 mx-auto">
-                        <!-- Facebook -->
-                        <a class="btn btn-primary" style="background-color: #3b5998;" href="#!" role="button"><i
-                                class="fab fa-facebook-f"></i></a>
-
-                        <!-- Twitter -->
-                        <a class="btn btn-primary" style="background-color: #55acee;" href="#!" role="button"><i
-                                class="fab fa-twitter"></i></a>
-
-                        <!-- Google -->
-                        <a class="btn btn-primary" style="background-color: #dd4b39;" href="#!" role="button"><i
-                                class="fab fa-google"></i></a>
-
-
-
-                        <!-- Linkedin -->
-                        <a class="btn btn-primary" style="background-color: #0082ca;" href="#!" role="button"><i
-                                class="fab fa-linkedin-in"></i></a>
-
-
-                        <!-- Whatsapp -->
-                        <a class="btn btn-primary" style="background-color: #25d366;" href="#!" role="button"><i
-                                class="fab fa-whatsapp"></i></a>
-                    </div>
-                </center>
-                <div class=" mt-3">
-                    <h1 class="services__title">{{blog.title}}</h1>
+          <div class="row">
+            {% for blog  in page.object_list %}
+        
+            <div class="col-md-3 blog">
+        
+              
+              <div class="card">
+               
+                    <img src="{{blog.image.url}}" alt="" >
+                    <p class="services__title text-lg underline">{{blog.title|safe}}</p>
+                    <article class="descripblo">
+                      {{blog.full_description|truncatechars:70|safe}}
+                     </article>
+                  <p class="services__title text-lg ">  {{blog.date_added}}</p>
+                  
+                <div class="content">
+                  <a  href="{% url 'detail' blog.title %}" class="page-link btn btn-primary">voir plus </a>
                 </div>
-
-
-                <article class="descrip">
-
-                    {{blog.full_description |safe}}
-
-                </article>
-
-                <p class="card-text"></p>
             </div>
+        
+          
+           <br>
+          
+          </div>
+        
+         
+        
+          {% endfor %}
+          </div> 
+        </section>
+      
 
-        </div>
+     
 
-    </section>
+  </div>
 
 </section>
 
+<!-- home section ends -->
+    <div class="container">
+<div class="row my-5 col-md-6 mx-auto">
+<div class="col-md-4 offset-md-3 ">
+  <div class="ml-7 page-link btn btn-primary "> page: {{page.number}}/{{page.paginator.num_pages}}</div>
+  <nav aria-label="...">
+    <ul class="pagination">
+      <li class="page-item ">
+        {% if page.has_previous %}
+        <a class="page-link btn btn-primary" href="{% url 'blogs' %}?page={{ page.previous_page_number }}">Précédente</a>
+        {% endif %}
+      </li>
+      {% for num_page in page.paginator.page_range%}
+      <br/>
+       {% if page_number == num_page %}
 
+      <li class="page-item " aria-current="page">
+        <a class="page-link" href="{% url 'blogs' %}?page={{ page.number }}">{{page.number}}</a>
+      </li>
+      
+       {% endif %}
+       <br/>
+      {% endfor %}
+      
+
+    <li class="page-item"><a class="page-link" href="{% url 'blogs' %}?page={{ page.number }}">{{page.number}}</a></li>
+    
+      <li class="page-item">
+       {% if page.has_next %}
+        <a class="page-link btn btn-primary" href="{% url 'blogs' %}?page={{ page.next_page_number }}">Suivante</a>
+        {% endif %}
+      </li>
+    </ul>
+  </nav>
+</div>
+</div>
+</div>
 
 {% endblock content %}
-
-
-<div class="col-md-6 mx-auto">
-    <div class="footer-logo">
-     <a href="#"><img src="{% static 'images/logo.png' %}" class="img-fluid" alt="logo" /></a>
-    </div>
-  </div>
